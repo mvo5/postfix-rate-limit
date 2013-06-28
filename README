@@ -1,0 +1,2 @@
+A simple daemon that will rate-limit the amount of mails that
+can be send via postfix
