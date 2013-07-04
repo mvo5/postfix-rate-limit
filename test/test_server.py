@@ -39,7 +39,7 @@ class PostfixPolicyServerTestCase(unittest.TestCase):
         return stdout
 
     def test_rate_limit_not_ok(self):
-        for i in range(199):
+        for i in range(MailLog.MAX_MAILS-1):
             res = self._send_req_to_server()
             self.assertEqual(res, 'action=OK\n')
         res = self._send_req_to_server()
